@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <div>
+        <h1>Simple counter</h1>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
@@ -16,6 +17,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
       <p> count is {counter}</p>
       <div className="card">
         <button onClick={() => dispatch(increment())}>increment</button>
