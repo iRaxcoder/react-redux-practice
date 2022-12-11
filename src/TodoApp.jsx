@@ -18,10 +18,18 @@ export const TodoApp = () => {
     <>
       <h1>Todos - RTK Query</h1>
       <hr />
-      {isLoading && <h4>isLoading...</h4>}
+      {isLoading && <h4>Loading...</h4>}
       <pre>{JSON.stringify(todos)}</pre>
-      <button onClick={prevTodo}>Prev Todo</button>
-      <button onClick={nextTodo}>Next Todo</button>
+      <button
+        disabled={isLoading}
+        style={{ margin: "10px" }}
+        onClick={prevTodo}
+      >
+        Prev Todo
+      </button>
+      <button disabled={isLoading} onClick={nextTodo}>
+        Next Todo
+      </button>
       <ul>
         {/*  {todos.map((todo) => (
           <li key={todo.id}>
